@@ -7,7 +7,7 @@ import {Route, createBrowserRouter, createRoutesFromElements, RouterProvider} fr
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
-      <Route path='/'element={<ScreenSection />} />
+      <Route path='/' element={<ScreenSection />} />
       <Route path='/liturgy-of-the-word' element={<PrimarySection />} />
       <Route path='/specific-text' element={<SecondarySection />} />
     </Route>
