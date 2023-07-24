@@ -7,9 +7,9 @@ import {Route, createBrowserRouter, createRoutesFromElements, RouterProvider} fr
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
-      <Route path='/catholic_website/'element={<ScreenSection />} />
-      <Route path='/catholic_website/liturgy-of-the-word' element={<PrimarySection />} />
-      <Route path='/catholic_website/specific-text' element={<SecondarySection />} />
+      <Route path='/'element={<ScreenSection />} />
+      <Route path='/liturgy-of-the-word' element={<PrimarySection />} />
+      <Route path='/specific-text' element={<SecondarySection />} />
     </Route>
   )
 )
