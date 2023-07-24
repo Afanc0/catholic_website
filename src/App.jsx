@@ -4,19 +4,29 @@ import SecondarySection from './components/secondary_comp/specifc_text'
 import {Route, createBrowserRouter, createRoutesFromElements, RouterProvider} from 'react-router-dom';
 
 
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    <Route>
-      <Route path='/' element={<ScreenSection />} />
-      <Route path='/liturgy-of-the-word' element={<PrimarySection />} />
-      <Route path='/specific-text' element={<SecondarySection />} />
-    </Route>
-  )
-)
+// const router = createBrowserRouter(
+//   createRoutesFromElements(
+//     <Route>
+//       <Route path='/' element={<ScreenSection />} />
+//       <Route path='/liturgy-of-the-word' element={<PrimarySection />} />
+//       <Route path='/specific-text' element={<SecondarySection />} />
+//     </Route>
+//   )
+// )
 
 function App() {
   return (
-    <RouterProvider router={router} />
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route>
+            <Route path='/' element={<ScreenSection />} />
+            <Route path='/liturgy-of-the-word' element={<PrimarySection />} />
+            <Route path='/specific-text' element={<SecondarySection />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 
 }
