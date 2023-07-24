@@ -1,0 +1,132 @@
+.background_component {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.background_component__frame {
+    width: 80%;
+    height: 95%;
+    border-radius: 10px;
+}
+
+.grid_frame_column {
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    width: 100%;
+    height: 100%;
+}
+
+.verse_section__grid_row {
+    display: grid;
+    grid-template-rows: 50% 50%;
+
+    width: 100%;
+    height: 100%;
+}
+
+.verse_data__information {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(44, 41, 41);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center_element {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.information_text {
+    font-size: 50px;
+}
+
+.verse_data__entry {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(44, 41, 41);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.verse_data__text {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(44, 41, 41);
+    padding-left: 7.5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    box-sizing: border-box;
+}
+
+p {
+    background-color: rgba(255, 255, 255, 0);
+    color: white
+}
+
+
+
+.form-layout {
+    color: white;
+    background-color: rgba(255, 255, 255, 0);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.input-label {
+    font-size: 20px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0);
+
+    letter-spacing: 2px;
+}
+  
+.input-field {
+    width: 70%;
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: white
+}
+  
+.input-field:focus {
+    outline: none;
+    border-color: #6c63ff;
+    box-shadow: 0 0 5px rgba(108, 99, 255, 0.3);
+}
+
+.input-button {
+    outline: none;
+    width: 90px;
+    height: 30px;
+    border-radius: 10px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.input-button:hover {
+    background-color: rgba(82, 75, 75, 0.575);
+}
+
+@media (max-width: 750px) {
+    .background_component__frame {
+        width: 100%;
+        height: 95%;
+    }
+}

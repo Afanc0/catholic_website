@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.center__menu_frame {
+    width: 100vw;
+    height: 85vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.grid__column_frontpage {
+    position: relative;
+    width: 50%;
+    height: 95%;
+
+    /* Formate Children Elements */
+    display: grid;
+    grid-template-columns: 75% 25%;
+    transition: grid-template-columns 1s;
+
+    border-radius: 5px;
+}
+
+.grid__primary_column,
+.grid__secondary_column {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.25);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+    overflow: hidden;
+}
+
+.grid__primary_column {
+    background-image: url('../image_assets/column3_image-min.jpeg');
+}
+.grid__secondary_column {
+    background-image: url('../image_assets/column1_image-min.jpeg');
+} 
+/* .grid__tertiary_column {
+    background-image: url('../image_assets/column2_image-min.jpeg');
+} */
+
+.border_asthetic {
+    width: 95%;
+    height: 95%;
+
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.border_asthetic.opacityChange {
+    opacity: 0;
+}
+
+.border_asthetic.opacityChange {
+    opacity: 0;
+}
+
+h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: aliceblue;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.background__foundation {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.slide_down__button {
+    padding: 10px 20px;
+    background-color: rgba(65, 62, 62, 0.497);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+
+    box-shadow: inset 0 0 0 0 #000000;
+    transition: ease-out .5s;
+}
+
+.slide_down__button:hover {
+    box-shadow: inset 0 100px 0 0 #000000;
+}
+
+.frame_track__feature {
+    height: 2.5%;
+    width: 50%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    
+}
+
+.dot_track__column1,
+.dot_track__column2 {
+    width: 5px;
+    height: 5px; 
+    background-color: rgb(236, 227, 227); 
+    border-radius: 50%; 
+}
+
+.dot_track__column1.opacityChange {
+    opacity: .5;
+}
+
+.dot_track__column2.opacityChange {
+    opacity: .5;
+}
+
+.home_icon,
+.resource_icon {
+    width: 40px;
+    height: 40px;
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(240, 255, 255);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.home_icon {
+    background-image: url('../image_assets/home.png');
+}
+
+.resource_icon {
+    background-image: url('../image_assets/bookicon.png');
+}
+
+.home_icon:hover,
+.resource_icon:hover {
+    border: 3px solid rgb(61, 61, 192);
+}
+
+.header_frame {
+    width: 100vw;
+    height: 8.5vh;
+    background-color: #F0F0F0;
+
+}
+
+.header_frame__title_block {
+    width: 300px;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+
+    background: none;
+    overflow-y: hidden;
+}
+
+.title_text {
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 36px; 
+    font-weight: 700; 
+    color: rgba(0, 0, 0); 
+    position: relative;
+    letter-spacing: 3.5px;
+}
+
+.title_text::after {
+    content: 'Daily Gospel';
+    display: block;
+    font-size: 15px; 
+    font-weight: 100; 
+    color: rgba(0,0,0,.7); 
+    text-align: center;
+}
+
+.cross_icon {
+    width: 40px;
+    height: 40px;
+    background-image: url('../image_assets/title_cross.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(240, 255, 255, 0);
+}
+
+/*Mobile Display Configuration: Status */
+@media (max-width: 750px) {
+
+    .header_frame {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .grid__column_frontpage {
+        position: relative;
+        width: 95%;
+        height: 95%;
+
+        /* Formate Children Elements */
+        display: grid;
+        grid-template-columns: 75% 25%;
+        transition: grid-template-columns 1s;
+
+        border-radius: 5px;
+    }
+}

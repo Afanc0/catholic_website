@@ -1,0 +1,88 @@
+
+:root {
+    --bg_color: #A8A196;
+}
+
+.transition__block {
+    width: 100vw;
+    height: 100vh;
+
+    background-color: #17594A;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.page_block__column1 {
+    background-color: var(--bg_color);
+    padding-top: 12.5%;
+    padding-bottom: 12.5%;
+    padding-left: 12.5%;
+    padding-right: 12.5%;
+}
+
+.image_background__slide {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+    left: 0;
+
+    border-radius: 50px;
+    border: 2.5px solid white;
+
+    background-image: url('../image_assets/B_F_JPII.jpg');
+    background-size: 900px 900px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    box-sizing: border-box;
+    box-shadow: 2px 5px 7px black
+}
+
+.page_block__column2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--bg_color);
+}
+
+.text_block {
+    background: none;
+}
+
+.text_paragraph {
+    font-size: 20px;
+}
+
+.text_paragraph::after {
+    content: '- St. John Paul II';
+    display: block;
+    margin-top: 10px;
+    margin-left: 25px;    
+}
+
+/*Mobile Display Configuration: Status */
+@media (max-width: 950px) {
+    .transition__block {
+        grid-template-columns: none;
+        grid-template-rows: 50% 50%;
+    }
+
+    .image_background__slide {
+        background-size: cover;
+        background-position: center;
+        background-attachment: local;
+    }
+
+    .page_block__column1 {
+        padding: 5%;
+    }
+
+    .page_block__column2 {
+        text-align: center;
+    }
+}
+
+  
