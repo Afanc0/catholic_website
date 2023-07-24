@@ -30,7 +30,7 @@ export default function TitleScreen() {
                     <div className='grid__primary_column' onMouseOver={() => handleMouseOver('75% 25%')}>
                         <div className={`border_asthetic ${opacityColumn1}`}>
                             <h1>Liturgy of the Word</h1> <br />
-                            <Link to='/liturgy-of-the-word' className='background__foundation'>
+                            <Link to='/catholic_website/liturgy-of-the-word' className='background__foundation'>
                                 <button className='slide_down__button'>
                                     Read More
                                 </button>
@@ -40,7 +40,7 @@ export default function TitleScreen() {
                     <div className='grid__secondary_column' onMouseOver={() => handleMouseOver('25% 75%')}>
                         <div className={`border_asthetic ${opacityColumn2}`}>
                             <h1>Specific Scripture</h1> <br />
-                            <Link to='/specific-text' className='background__foundation'>
+                            <Link to='/catholic_website/specific-text' className='background__foundation'>
                                 <button className='slide_down__button'>
                                     Read More
                                 </button>
