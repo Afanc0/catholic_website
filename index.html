@@ -4,7 +4,39 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Daily Gospel Resunnect</title>    
+    <title>Daily Gospel Resunnect</title>   
+    
+    <script type="text/javascript">
+      var pathSegmentsToKeep = 1;
+    
+      var l = window.location;
+      var hasRedirectedParam = /\bredirected=true\b/.test(l.search);
+    
+      if (!hasRedirectedParam) {
+        l.replace(
+          l.protocol +
+            "//" +
+            l.hostname +
+            (l.port ? ":" + l.port : "") +
+            l.pathname
+              .split("/")
+              .slice(0, 1 + pathSegmentsToKeep)
+              .join("/") +
+            "/?/" +
+            l.pathname
+              .slice(1)
+              .split("/")
+              .slice(pathSegmentsToKeep)
+              .join("/")
+              .replace(/&/g, "~and~") +
+            (l.search ? "&" + l.search.slice(1).replace(/&/g, "~and~") : "") +
+            l.hash +
+            (l.search ? "&" : "?") +
+            "redirected=true" // Add the 'redirected' parameter to the URL
+        );
+      }
+    </script>
+    
     <script type="module" crossorigin src="/assets/index-4890f4d0.js"></script>
     <link rel="stylesheet" href="/assets/index-293d659e.css">
   </head>
