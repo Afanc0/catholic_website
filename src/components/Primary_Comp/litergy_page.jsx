@@ -55,16 +55,16 @@ export default function LitergyPage() {
                 {(!contentObj) ? <div className='Loading_Component'>{loadingText}</div> :
                     <>
                         <div className='date_frame'>
-                            {contentObj[0].DateID}
+                            {contentObj.DateID}
                         </div>
                         <div className='background__border-frame'>
                             
                                 <div className='grid__formation_row'>
                                         <div className='grid__reading_row'>
-                                            <HandleBibleAPI typeName='Reading' verseRef={contentObj[0].ReadingVerse} />
+                                            <HandleBibleAPI typeName='Reading' verseRef={contentObj.ReadingVerse} />
                                         </div> 
                                         <div className='grid__gosepl_row'>
-                                            <HandleBibleAPI typeName='Gospel' verseRef={contentObj[0].GospelVerse}/>
+                                            <HandleBibleAPI typeName='Gospel' verseRef={contentObj.GospelVerse}/>
                                         </div>
                                 </div>
                                                 
