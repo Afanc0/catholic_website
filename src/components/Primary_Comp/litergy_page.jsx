@@ -36,7 +36,7 @@ export default function LitergyPage() {
     }, [contentObj]); 
 
     useEffect(() => { 
-        fetch('https://afanc0.github.io/liturgy_json/liturgy_api.json')
+        fetch(`https://afanc0.github.io/liturgy_json/liturgy_api.json`)
             .then((res) => {
                 return res.json()
             })
@@ -52,21 +52,25 @@ export default function LitergyPage() {
     return (
         <>
             <div className='background__frame'>
-                <div className='date_frame'>
-                    {currentDate}
-                </div>
-                <div className='background__border-frame'>
-                    {(!contentObj) ? <div className='Loading_Component'>{loadingText}</div> : 
-                        <div className='grid__formation_row'>
-                                <div className='grid__reading_row'>
-                                    <HandleBibleAPI typeName='Reading' verseRef={contentObj.reading} />
-                                </div> 
-                                <div className='grid__gosepl_row'>
-                                    <HandleBibleAPI typeName='Gospel' verseRef={contentObj.gospel}/>
-                                </div>
+                {(!contentObj) ? <div className='Loading_Component'>{loadingText}</div> :
+                    <>
+                        <div className='date_frame'>
+                            {contentObj[0].DateID}
                         </div>
-                    }                       
-                </div> 
+                        <div className='background__border-frame'>
+                            
+                                <div className='grid__formation_row'>
+                                        <div className='grid__reading_row'>
+                                            <HandleBibleAPI typeName='Reading' verseRef={contentObj[0].ReadingVerse} />
+                                        </div> 
+                                        <div className='grid__gosepl_row'>
+                                            <HandleBibleAPI typeName='Gospel' verseRef={contentObj[0].GospelVerse}/>
+                                        </div>
+                                </div>
+                                                
+                        </div> 
+                    </>
+                }
             </div>
         </>
     )
